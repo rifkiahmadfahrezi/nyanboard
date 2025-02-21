@@ -1,25 +1,21 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { ThemeProvider } from "./theme-provider"
+import React from "react";
+import { ThemeProvider } from "./theme-provider";
 
-const Providers = ({
-   children
-}: {
-   children: React.ReactNode
-}) => {
+const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
-   <>
-   <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
+    <>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
       >
-      {children}
-   </ThemeProvider>
-   </>
-  )
-}
+        {children}
+      </ThemeProvider>
+    </>
+  );
+};
 
-export default Providers
+export default Providers;

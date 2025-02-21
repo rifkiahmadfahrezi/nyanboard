@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { ChevronDown, ChevronRight } from "lucide-react"
+import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,49 +13,54 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
+} from "@/components/ui/breadcrumb";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 interface BreadcrumbItem {
-  href: string
-  label: string
+  href: string;
+  label: string;
 }
 
 interface DynamicBreadcrumbProps {
-  className?: string
+  className?: string;
 }
 
 export function DynamicBreadcrumb({ className }: DynamicBreadcrumbProps) {
-  const pathname = usePathname()
-  const [isMobile, setIsMobile] = React.useState(false)
+  const pathname = usePathname();
+  const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const breadcrumbItems = React.useMemo(() => {
-    const paths = pathname.split("/").filter(Boolean)
+    const paths = pathname.split("/").filter(Boolean);
     return [
       { href: "/", label: "Home" },
       ...paths.map((path, index) => ({
         href: `/${paths.slice(0, index + 1).join("/")}`,
         label: path.charAt(0).toUpperCase() + path.slice(1),
       })),
-    ]
-  }, [pathname])
+    ];
+  }, [pathname]);
 
   if (breadcrumbItems.length === 0) {
-    return null
+    return null;
   }
 
-  const visibleItems = isMobile ? 2 : 3
-  const firstItem = breadcrumbItems[0]
-  const lastItem = breadcrumbItems[breadcrumbItems.length - 1]
-  const middleItems = breadcrumbItems.slice(1, -1)
+  const visibleItems = isMobile ? 2 : 3;
+  const firstItem = breadcrumbItems[0];
+  const lastItem = breadcrumbItems[breadcrumbItems.length - 1];
+  const middleItems = breadcrumbItems.slice(1, -1);
 
   return (
     <Breadcrumb className={cn("flex-wrap", className)}>
@@ -77,14 +82,19 @@ export function DynamicBreadcrumb({ className }: DynamicBreadcrumbProps) {
                 {!isMobile && (
                   <BreadcrumbItem>
                     <BreadcrumbLink href={middleItems[0].href} asChild>
-                      <Link href={middleItems[0].href}>{middleItems[0].label}</Link>
+                      <Link href={middleItems[0].href}>
+                        {middleItems[0].label}
+                      </Link>
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                 )}
                 <BreadcrumbItem>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" className="h-auto p-0 font-normal">
+                      <Button
+                        variant="ghost"
+                        className="h-auto p-0 font-normal"
+                      >
                         <ChevronDown className="h-4 w-4" />
                         <span className="sr-only">Toggle menu</span>
                       </Button>
@@ -104,7 +114,10 @@ export function DynamicBreadcrumb({ className }: DynamicBreadcrumbProps) {
                       <ChevronRight className="h-4 w-4" />
                     </BreadcrumbSeparator>
                     <BreadcrumbItem>
-                      <BreadcrumbLink href={middleItems[middleItems.length - 1].href} asChild>
+                      <BreadcrumbLink
+                        href={middleItems[middleItems.length - 1].href}
+                        asChild
+                      >
                         <Link href={middleItems[middleItems.length - 1].href}>
                           {middleItems[middleItems.length - 1].label}
                         </Link>
@@ -135,6 +148,5 @@ export function DynamicBreadcrumb({ className }: DynamicBreadcrumbProps) {
         )}
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }
-

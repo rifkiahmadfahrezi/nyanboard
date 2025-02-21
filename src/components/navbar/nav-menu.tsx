@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import {
@@ -13,8 +13,9 @@ import {
 
 import { navbarMenus } from "@/config/navigation-menu/navbar";
 
-
-export function NavMenu({ ...props } : React.ComponentProps<typeof NavigationMenu>) {
+export function NavMenu({
+  ...props
+}: React.ComponentProps<typeof NavigationMenu>) {
   return (
     <NavigationMenu {...props}>
       <NavigationMenuList>
@@ -34,8 +35,12 @@ export function NavMenu({ ...props } : React.ComponentProps<typeof NavigationMen
                           >
                             {item.icon && <item.icon className="h-5 w-5" />}
                             <div>
-                              <div className="text-sm font-medium">{item.title}</div>
-                              <p className="text-xs text-muted-foreground">{item.description}</p>
+                              <div className="text-sm font-medium">
+                                {item.title}
+                              </div>
+                              <p className="text-xs text-muted-foreground">
+                                {item.description}
+                              </p>
                             </div>
                           </a>
                         </NavigationMenuLink>

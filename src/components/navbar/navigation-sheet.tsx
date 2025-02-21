@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "@/components/ui/collapsible";
 
 import Link from "next/link";
 
@@ -26,46 +26,31 @@ export const NavigationSheet = () => {
                 <Button
                   asChild
                   className="w-full justify-start"
-                  variant={'ghost'}
-                  >
-                  <Link href={menu.url}>
-                    {menu.label}
-                  </Link>
+                  variant={"ghost"}
+                >
+                  <Link href={menu.url}>{menu.label}</Link>
                 </Button>
               )}
-              { menu.items && (
+              {menu.items && (
                 <Collapsible>
-                  <CollapsibleTrigger
-                    asChild
-                    className="w-full justify-start"
-                    >
-                    <Button
-                      variant={'ghost'}
-                      className="w-full justify-start"
-                      >
+                  <CollapsibleTrigger asChild className="w-full justify-start">
+                    <Button variant={"ghost"} className="w-full justify-start">
                       <span>{menu.label}</span>
                       <ChevronDown />
                     </Button>
-                    </CollapsibleTrigger>
+                  </CollapsibleTrigger>
                   <CollapsibleContent>
                     <ul className="flex flex-col bg-secondary rounded mt-1">
                       {menu.items.map((item) => (
-                        <li 
-                          key={item.title} className=" ml-5 py-2">
-                          <Button
-                            asChild
-                            variant={'ghost'}
-                            >
-                            <Link href={item.url}>
-                              {item.title}
-                            </Link>
+                        <li key={item.title} className=" ml-5 py-2">
+                          <Button asChild variant={"ghost"}>
+                            <Link href={item.url}>{item.title}</Link>
                           </Button>
                         </li>
                       ))}
                     </ul>
                   </CollapsibleContent>
                 </Collapsible>
-
               )}
             </li>
           ))}

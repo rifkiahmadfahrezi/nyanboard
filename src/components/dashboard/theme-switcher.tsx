@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 
-import { Sun, Moon } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '../ui/sidebar'
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "../ui/sidebar";
 
 export const ThemeSwithcer = () => {
-
-   const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   return (
-   <SidebarMenu>
+    <SidebarMenu>
       <SidebarMenuItem>
-      <SidebarMenuButton 
-         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-         className='cursor-pointer'>
-         {theme === 'dark' ? <Sun /> : <Moon />}
-         <span>{theme === 'dark' ? 'Light' : 'Dark'} mode</span>
-      </SidebarMenuButton>
+        <SidebarMenuButton
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="cursor-pointer"
+        >
+          {theme === "dark" ? <Sun /> : <Moon />}
+          <span>{theme === "dark" ? "Light" : "Dark"} mode</span>
+        </SidebarMenuButton>
       </SidebarMenuItem>
-   </SidebarMenu>
-  )
-}
+    </SidebarMenu>
+  );
+};

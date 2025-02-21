@@ -1,24 +1,20 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import {
-  AudioWaveform,
-  Command,
-  GalleryVerticalEnd,
-} from "lucide-react"
+import * as React from "react";
+import { AudioWaveform, Command, GalleryVerticalEnd } from "lucide-react";
 
-import { NavUser } from "./nav-user"
-import { TeamSwitcher } from "./team-switcher"
-import { ThemeSwithcer }  from "./theme-switcher"
+import { NavUser } from "./nav-user";
+import { TeamSwitcher } from "./team-switcher";
+import { ThemeSwithcer } from "./theme-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
-import { NavMenu } from "./nav-menu"
-import { sidebarMenus } from "@/config/navigation-menu/sidebar"
+} from "@/components/ui/sidebar";
+import { NavMenu } from "./nav-menu";
+import { sidebarMenus } from "@/config/navigation-menu/sidebar";
 
 const data = {
   user: {
@@ -43,8 +39,7 @@ const data = {
       plan: "Free",
     },
   ],
-}
-
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -61,5 +56,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-  )
+  );
 }
