@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Logo } from "../logo";
 import { NavMenu } from "./nav-menu";
+import Link from "next/link";
 import { NavigationSheet } from "./navigation-sheet";
 import { cn } from "@/lib/utils";
 
@@ -18,10 +19,12 @@ export const Navbar = ({
           <NavMenu className="hidden md:block" />
 
           <div className="flex items-center gap-3">
-            <Button variant="outline" className="hidden sm:inline-flex">
-              Sign In
+            <Button asChild variant="outline" className="hidden sm:inline-flex">
+              <Link href={"/sign-in"}>Sign In</Link>
             </Button>
-            <Button>Get Started</Button>
+            <Button asChild>
+              <Link href="/sign-up">Get Started</Link>
+            </Button>
 
             {/* Mobile Menu */}
             <div className="md:hidden">
