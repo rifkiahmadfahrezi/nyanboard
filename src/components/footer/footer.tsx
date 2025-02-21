@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 import { Logo } from "../logo";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 
 const footerSections = [
   {
@@ -153,8 +154,8 @@ export const Footer = ({
             {/* Copyright */}
             <span className="text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
-              <Link href="/" target="_blank">
-                Shadcn UI Blocks
+              <Link href="/">
+                {siteConfig.name}
               </Link>
               . All rights reserved.
             </span>
