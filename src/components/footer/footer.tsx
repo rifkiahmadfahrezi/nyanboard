@@ -10,109 +10,7 @@ import { Logo } from "../logo";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 
-const footerSections = [
-  {
-    title: "Product",
-    links: [
-      {
-        title: "Overview",
-        href: "#",
-      },
-      {
-        title: "Pricing",
-        href: "#",
-      },
-      {
-        title: "Releases",
-        href: "#",
-      },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      {
-        title: "About us",
-        href: "#",
-      },
-      {
-        title: "Careers",
-        href: "#",
-      },
-      {
-        title: "Contact",
-        href: "#",
-      },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      {
-        title: "Blog",
-        href: "#",
-      },
-      {
-        title: "Newsletter",
-        href: "#",
-      },
-      {
-        title: "Events",
-        href: "#",
-      },
-      {
-        title: "Support",
-        href: "#",
-      },
-    ],
-  },
-  {
-    title: "Social",
-    links: [
-      {
-        title: "Twitter",
-        href: "#",
-      },
-      {
-        title: "LinkedIn",
-        href: "#",
-      },
-      {
-        title: "Facebook",
-        href: "#",
-      },
-      {
-        title: "GitHub",
-        href: "#",
-      },
-      {
-        title: "AngelList",
-        href: "#",
-      },
-      {
-        title: "Dribbble",
-        href: "#",
-      },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      {
-        title: "Terms",
-        href: "#",
-      },
-      {
-        title: "Privacy",
-        href: "#",
-      },
-      {
-        title: "Cookies",
-        href: "#",
-      },
-    ],
-  },
-];
+import { footerSections } from "@/config/navigation-menu/footer";
 
 export const Footer = ({
   className,
@@ -134,14 +32,14 @@ export const Footer = ({
           {footerSections.map(({ title, links }) => (
             <div key={title}>
               <h6 className="font-semibold">{title}</h6>
-              <ul className="mt-6 space-y-4">
-                {links.map(({ title, href }) => (
-                  <li key={title}>
+              <ul className="mt-6 space-y-3">
+                {links.map(({ label, href }) => (
+                  <li key={label}>
                     <Link
                       href={href}
-                      className="text-muted-foreground hover:text-foreground"
+                      className="text-muted-foreground hover:text-foreground hover:underline"
                     >
-                      {title}
+                      {label}
                     </Link>
                   </li>
                 ))}
