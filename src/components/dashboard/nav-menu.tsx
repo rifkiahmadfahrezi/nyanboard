@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/sidebar";
 import { isMenuActive } from "@/config/navigation-menu/utils";
 import Link from "next/link";
+import { Badge } from "../ui/badge";
 
 export const NavMenu = ({ menus }: { menus: SidebarMenuType[] }) => {
   return (
@@ -76,8 +77,16 @@ export const CollapsibleMenu = ({ items }: { items: SidebarSubmenu }) => {
             tooltip={items.label}
           >
             {items.icon && <items.icon />}
-            <span>{items.label}</span>
+            <span className="line-clamp-1" title={items.label}>{items.label}</span>
             <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+            {items.badge && (
+              <Badge
+                className="text-xs py-[1px] px-[2px] rounded-xl"
+                variant={items.badge.variant || "secondary"}
+              >
+                {items.badge.content}
+              </Badge>
+            )}
           </SidebarMenuButton>
         </CollapsibleTrigger>
         <CollapsibleContent>
@@ -86,7 +95,15 @@ export const CollapsibleMenu = ({ items }: { items: SidebarSubmenu }) => {
               <SidebarMenuSubItem key={subItem.label}>
                 <SidebarMenuSubButton asChild>
                   <Link href={subItem.url}>
-                    <span>{subItem.label}</span>
+                    <span className="line-clamp-1" title={subItem.label}>{subItem.label}</span>
+                    {subItem.badge && (
+                      <Badge
+                        className="text-xs py-[1px] px-[2px] rounded-xl"
+                        variant={subItem.badge.variant || "secondary"}
+                      >
+                        {subItem.badge.content}
+                      </Badge>
+                    )}
                   </Link>
                 </SidebarMenuSubButton>
               </SidebarMenuSubItem>
@@ -110,7 +127,15 @@ export const Menu = ({ item }: { item: SidebarSubmenu }) => {
       >
         <Link href={item.url}>
           {item.icon && <item.icon />}
-          <span>{item.label}</span>
+          <span className="line-clamp-1" title={item.label}>{item.label}</span>
+          {item.badge && (
+            <Badge
+              className="text-xs py-[1px] px-[2px] rounded-xl"
+              variant={item.badge.variant || "secondary"}
+            >
+              {item.badge.content}
+            </Badge>
+          )}
         </Link>
       </SidebarMenuButton>
     </SidebarMenuItem>

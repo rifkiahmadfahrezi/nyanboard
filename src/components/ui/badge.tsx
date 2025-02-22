@@ -13,6 +13,8 @@ const badgeVariants = cva(
           "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
         success:
           "border-transparent bg-green-200 text-green-950 dark:bg-green-950 dark:text-green-300",
+        warning:
+          "border-transparent bg-yellow-200 text-yellow-950 dark:bg-yellow-950 dark:text-yellow-300",
         pending:
           "border-transparent bg-blue-200 text-blue-950 dark:bg-blue-950 dark:text-blue-300",
         secondary:
@@ -28,6 +30,8 @@ const badgeVariants = cva(
     },
   },
 );
+
+export type BadgeVariant = VariantProps<typeof badgeVariants>;
 
 function Badge({
   className,

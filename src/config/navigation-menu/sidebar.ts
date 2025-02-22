@@ -20,23 +20,43 @@ export const sidebarMenus: SidebarMenu[] = [
       {
         label: "Components",
         url: "/dashboard/components",
+        badge: {
+          variant: "warning",
+          content: "wip",
+        },
         icon: LayoutDashboard,
         items: [
           {
             label: "Editor",
             url: "/dashboard/components/editor",
+            badge: {
+              variant: "warning",
+              content: "wip",
+            },
           },
           {
             label: "Overview card",
             url: "/dashboard/components/overview card",
+            badge: {
+              variant: "warning",
+              content: "wip",
+            },
           },
           {
             label: "Charts",
             url: "/dashboard/components/charts",
+            badge: {
+              variant: "warning",
+              content: "wip",
+            },
           },
           {
             label: "Multistep form",
             url: "/dashboard/components/multistep-form",
+            badge: {
+              variant: "warning",
+              content: "wip",
+            },
           },
         ],
       },
