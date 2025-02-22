@@ -15,7 +15,10 @@ export const AuthLayout = ({
   ...props
 }: AuthLayout) => {
   return (
-    <div className={cn("h-screen flex items-center justify-center", className)} {...props}>
+    <div
+      className={cn("h-screen flex items-center justify-center", className)}
+      {...props}
+    >
       <div className="w-full h-full grid lg:grid-cols-2 p-4">
         <div className="max-w-xs m-auto w-full flex flex-col items-center">
           <div className="mb-10 flex items-center flex-col">
