@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Nyashboard",
+  name: "Nyanboard",
   description: "A free and open-source nextjs shadcn dashboard template",
   ogImage: "/og.jpg",
   links: {
