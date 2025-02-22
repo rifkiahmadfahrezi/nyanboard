@@ -1,9 +1,9 @@
 export type FooterSection = {
-   title: string;
-   links: FooterLink[];
-}
+  title: string;
+  links: FooterLink[];
+};
 
 export type FooterLink = {
-   label: string;
-   href: string;
-}
+  label: string;
+  href: string;
+};
