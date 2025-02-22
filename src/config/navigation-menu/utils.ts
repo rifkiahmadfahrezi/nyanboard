@@ -1,6 +1,11 @@
-export const getActiveMenu = (
-  currentLink: string,
-  menuLink: string,
+export const isMenuActive = (
+  rootLink: RootLink = "/",
+  currentPath: string,
+  link: string,
 ): boolean => {
-  return currentLink.includes(menuLink);
+  return currentPath === rootLink && link !== rootLink
+    ? false
+    : link.startsWith(currentPath);
 };
+
+type RootLink = `/${string}`;
