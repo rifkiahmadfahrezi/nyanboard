@@ -11,7 +11,7 @@
   --card-foreground: #171821;
   --popover: hsl(0 0% 100%);
   --popover-foreground: #171821;
-  --primary: #A9DFD8;
+  --primary: #61b2a7;
   --primary-foreground: #171821;
   --secondary: hsl(60, 1%, 80%);
   --secondary-foreground: hsl(24 9.8% 10%);
@@ -22,7 +22,7 @@
   --destructive: hsl(0 84.2% 60.2%);
   --destructive-foreground: #FFFFFF;
   --border: #d1d0d0;
-  --input: #fafafa;
+  --input: #cacaca;
   --ring: #171821;
   --radius: .3rem;
   --chart-1: hsl(220 70% 50%);
