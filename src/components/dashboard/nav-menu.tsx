@@ -77,7 +77,9 @@ export const CollapsibleMenu = ({ items }: { items: SidebarSubmenu }) => {
             tooltip={items.label}
           >
             {items.icon && <items.icon />}
-            <span className="line-clamp-1" title={items.label}>{items.label}</span>
+            <span className="line-clamp-1" title={items.label}>
+              {items.label}
+            </span>
             <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
             {items.badge && (
               <Badge
@@ -95,7 +97,9 @@ export const CollapsibleMenu = ({ items }: { items: SidebarSubmenu }) => {
               <SidebarMenuSubItem key={subItem.label}>
                 <SidebarMenuSubButton asChild>
                   <Link href={subItem.url}>
-                    <span className="line-clamp-1" title={subItem.label}>{subItem.label}</span>
+                    <span className="line-clamp-1" title={subItem.label}>
+                      {subItem.label}
+                    </span>
                     {subItem.badge && (
                       <Badge
                         className="text-xs py-[1px] px-[2px] rounded-xl"
@@ -127,7 +131,9 @@ export const Menu = ({ item }: { item: SidebarSubmenu }) => {
       >
         <Link href={item.url}>
           {item.icon && <item.icon />}
-          <span className="line-clamp-1" title={item.label}>{item.label}</span>
+          <span className="line-clamp-1" title={item.label}>
+            {item.label}
+          </span>
           {item.badge && (
             <Badge
               className="text-xs py-[1px] px-[2px] rounded-xl"

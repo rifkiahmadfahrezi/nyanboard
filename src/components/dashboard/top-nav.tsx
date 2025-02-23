@@ -13,7 +13,7 @@ export const TopNav = ({
   return (
     <header
       className={cn(
-        "flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12",
+        "flex h-16 sticky top-0 bg-background/10 backdrop-blur-sm shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12",
         className,
       )}
       {...props}
