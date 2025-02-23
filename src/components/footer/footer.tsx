@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import {
+  ArrowUpRight,
   DribbbleIcon,
   GithubIcon,
   TwitchIcon,
@@ -11,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 
 import { footerSections } from "@/config/navigation-menu/footer";
+import { ThemeChange } from "../theme-change";
 
 export const Footer = ({
   className,
@@ -35,12 +37,23 @@ export const Footer = ({
               <ul className="mt-6 space-y-3">
                 {links.map(({ label, href }) => (
                   <li key={label}>
-                    <Link
-                      href={href}
-                      className="text-muted-foreground hover:text-foreground hover:underline"
-                    >
-                      {label}
-                    </Link>
+                    {href.startsWith("http") ? (
+                      <a
+                        target="_blank"
+                        href={href}
+                        className="text-muted-foreground hover:text-foreground hover:underline flex items-center gap-1"
+                      >
+                        {label}
+                        <ArrowUpRight className="size-3" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={href}
+                        className="text-muted-foreground hover:text-foreground hover:underline"
+                      >
+                        {label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -56,18 +69,7 @@ export const Footer = ({
           </span>
 
           <div className="flex items-center gap-5 text-muted-foreground">
-            <Link href="#" target="_blank">
-              <TwitterIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <DribbbleIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <TwitchIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <GithubIcon className="h-5 w-5" />
-            </Link>
+            <ThemeChange />
           </div>
         </div>
       </div>

@@ -60,28 +60,16 @@ export const footerSections: FooterSection[] = [
     title: "Social",
     links: [
       {
-        label: "Twitter",
-        href: "#",
+        label: "Instagram",
+        href: "https://www.instagram.com/nekode.id/",
       },
       {
-        label: "LinkedIn",
-        href: "#",
+        label: "Github",
+        href: "https://github.com/rifkiahmadfahrezi/nyanboard",
       },
       {
-        label: "Facebook",
-        href: "#",
-      },
-      {
-        label: "GitHub",
-        href: "#",
-      },
-      {
-        label: "AngelList",
-        href: "#",
-      },
-      {
-        label: "Dribbble",
-        href: "#",
+        label: "Tiktok",
+        href: "https://tiktok.com/nekode.id",
       },
     ],
   },
