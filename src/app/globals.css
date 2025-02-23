@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fafafa;
+  --background: #f5f1f1;
   --foreground: #171821;
   --card: hsl(0 0% 100%);
   --card-foreground: #171821;
@@ -13,7 +13,7 @@
   --popover-foreground: #171821;
   --primary: #A9DFD8;
   --primary-foreground: #171821;
-  --secondary: hsl(60 4.8% 95.9%);
+  --secondary: hsl(60, 1%, 80%);
   --secondary-foreground: hsl(24 9.8% 10%);
   --muted: hsl(60 4.8% 95.9%);
   --muted-foreground: hsl(25 5.3% 44.7%);
@@ -21,7 +21,7 @@
   --accent-foreground: hsl(24 9.8% 10%);
   --destructive: hsl(0 84.2% 60.2%);
   --destructive-foreground: #FFFFFF;
-  --border: #fafafa;
+  --border: #d1d0d0;
   --input: #fafafa;
   --ring: #171821;
   --radius: .3rem;
