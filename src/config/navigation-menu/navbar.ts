@@ -7,12 +7,18 @@ export const navbarMenus: NavMenu[] = [
     url: "/",
   },
   {
-    label: "About",
-    url: "/about",
+    label: "Blog",
+    url: "/blog",
   },
   {
     label: "Company",
     items: [
+      {
+        title: "About us",
+        url: "#",
+        description: "Meet our team",
+        icon: Briefcase,
+      },
       {
         title: "Our Team",
         url: "#",
