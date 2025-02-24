@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Nyanboard",
-  url: 'http://nyanboard.rifkiaf.my.id',
+  url: "http://nyanboard.rifkiaf.my.id",
   description: "A free and open-source nextjs shadcn dashboard template",
   ogImage: "/og.jpg",
   links: {
