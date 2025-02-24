@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -10,7 +9,7 @@ export const Hero = () => {
   return (
     <div className="min-h-screen w-full flex flex-col gap-10 items-center justify-center px-6 py-16">
       <div className="text-center max-w-3xl">
-        <Badge variant={'primary'}  className="rounded-full">
+        <Badge variant={"primary"} className="rounded-full">
           Just released
         </Badge>
         <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] tracking-tight">
