@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f5f1f1;
+  --background: #f4f4f4;
   --foreground: #171821;
   --card: hsl(0 0% 100%);
   --card-foreground: #171821;
@@ -176,4 +176,12 @@
   }
 }
 
-/* [transition-timing-function:cubic-bezier(0.25,0.1,0.25,1)] */
+.heading-1{
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+}
+.heading-2{
+  @apply scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+}
+.heading-3{
+  @apply scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+}
