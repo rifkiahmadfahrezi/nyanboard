@@ -22,10 +22,12 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [{
-      url: `${siteConfig.url}${siteConfig.ogImage}`,
-    }],
-  }
+    images: [
+      {
+        url: `${siteConfig.url}${siteConfig.ogImage}`,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
