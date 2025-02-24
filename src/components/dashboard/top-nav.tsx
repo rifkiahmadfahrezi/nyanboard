@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "../ui/sidebar";
 import { DynamicBreadcrumb } from "./dynamic-breadcrumb";
+import { NotificationDropdown } from "@/features/notification/notification-dropdown";
+import { SearchDialog } from "@/features/search-bar/search-dialog";
 
 export const TopNav = ({
   className,
@@ -18,24 +20,17 @@ export const TopNav = ({
       )}
       {...props}
     >
-      <div className="flex items-center gap-2 px-4">
-        <SidebarTrigger className="-ml-1" />
+      <div className="flex items-center justify-between w-full gap-2 px-4">
+        <div className="flex items-center">
+          <SidebarTrigger className="-ml-1" />
 
-        <Separator orientation="vertical" className="mr-2 h-4" />
-        <DynamicBreadcrumb />
-        {/* <Breadcrumb>
-            <BreadcrumbList>
-               <BreadcrumbItem className="hidden md:block">
-               <BreadcrumbLink href="#">
-                  Building Your Application
-               </BreadcrumbLink>
-               </BreadcrumbItem>
-               <BreadcrumbSeparator className="hidden md:block" />
-               <BreadcrumbItem>
-               <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-               </BreadcrumbItem>
-            </BreadcrumbList>
-         </Breadcrumb> */}
+          <Separator orientation="vertical" className="mr-2 h-4" />
+          <DynamicBreadcrumb />
+        </div>
+        <div className="flex items-center gap-1">
+          <SearchDialog />
+          <NotificationDropdown />
+        </div>
       </div>
     </header>
   );
