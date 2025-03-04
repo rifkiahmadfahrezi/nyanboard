@@ -29,18 +29,6 @@ export const sidebarMenus: SidebarMenu[] = [
           {
             label: "Editor",
             url: "/dashboard/components/editor",
-            badge: {
-              variant: "warning",
-              content: "wip",
-            },
-          },
-          {
-            label: "Overview card",
-            url: "/dashboard/components/overview card",
-            badge: {
-              variant: "warning",
-              content: "wip",
-            },
           },
           {
             label: "Charts",
