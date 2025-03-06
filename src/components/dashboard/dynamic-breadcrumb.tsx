@@ -1,152 +1,81 @@
-"use client";
+'use client'
 
-import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import React, { useMemo } from 'react'
 
-import { cn } from "@/lib/utils";
 import {
   Breadcrumb,
+  BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/components/ui/breadcrumb"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/dropdown-menu"
+import { HomeIcon } from 'lucide-react'
+import Link from 'next/link'
 
-interface BreadcrumbItem {
-  href: string;
-  label: string;
-}
+import { usePathname } from 'next/navigation'
 
-interface DynamicBreadcrumbProps {
-  className?: string;
-}
+export const DynamicBreadcrumb = () => {
+  const pathname = usePathname()
 
-export function DynamicBreadcrumb({ className }: DynamicBreadcrumbProps) {
-  const pathname = usePathname();
-  const [isMobile, setIsMobile] = React.useState(false);
+  const paths : string[] = useMemo(() => {
+    const splited = pathname.split('/')
+    splited.shift()
+    return splited
+  }, [pathname])
 
-  React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  const dropdownMenu : string[] = useMemo(() => {
+    const splited = pathname.split('/')
+    splited.shift()
+    splited.shift()
+    splited.pop()
+    return splited
+  }, [pathname])
 
-  const breadcrumbItems = React.useMemo(() => {
-    const paths = pathname.split("/").filter(Boolean);
-    return [
-      { href: "/", label: "Home" },
-      ...paths.map((path, index) => ({
-        href: `/${paths.slice(0, index + 1).join("/")}`,
-        label: path.charAt(0).toUpperCase() + path.slice(1),
-      })),
-    ];
-  }, [pathname]);
-
-  if (breadcrumbItems.length === 0) {
-    return null;
-  }
-
-  const visibleItems = isMobile ? 2 : 3;
-  const firstItem = breadcrumbItems[0];
-  const lastItem = breadcrumbItems[breadcrumbItems.length - 1];
-  const middleItems = breadcrumbItems.slice(1, -1);
 
   return (
-    <Breadcrumb className={cn("flex-wrap", className)}>
+    <Breadcrumb>
       <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink href={firstItem.href} asChild>
-            <Link href={firstItem.href}>{firstItem.label}</Link>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-
-        {breadcrumbItems.length > 1 && (
+        {paths.length > 1 && (
           <>
-            <BreadcrumbSeparator>
-              <ChevronRight className="h-4 w-4" />
-            </BreadcrumbSeparator>
-
-            {middleItems.length > visibleItems - 2 ? (
-              <>
-                {!isMobile && (
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href={middleItems[0].href} asChild>
-                      <Link href={middleItems[0].href}>
-                        {middleItems[0].label}
-                      </Link>
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                )}
-                <BreadcrumbItem>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        className="h-auto p-0 font-normal"
-                      >
-                        <ChevronDown className="h-4 w-4" />
-                        <span className="sr-only">Toggle menu</span>
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="start">
-                      {middleItems.slice(isMobile ? 0 : 1, -1).map((item) => (
-                        <DropdownMenuItem key={item.href} asChild>
-                          <Link href={item.href}>{item.label}</Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </BreadcrumbItem>
-                {!isMobile && middleItems.length > 1 && (
-                  <>
-                    <BreadcrumbSeparator>
-                      <ChevronRight className="h-4 w-4" />
-                    </BreadcrumbSeparator>
-                    <BreadcrumbItem>
-                      <BreadcrumbLink
-                        href={middleItems[middleItems.length - 1].href}
-                        asChild
-                      >
-                        <Link href={middleItems[middleItems.length - 1].href}>
-                          {middleItems[middleItems.length - 1].label}
-                        </Link>
-                      </BreadcrumbLink>
-                    </BreadcrumbItem>
-                  </>
-                )}
-              </>
-            ) : (
-              middleItems.map((item) => (
-                <React.Fragment key={item.href}>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href={item.href} asChild>
-                      <Link href={item.href}>{item.label}</Link>
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator>
-                    <ChevronRight className="h-4 w-4" />
-                  </BreadcrumbSeparator>
-                </React.Fragment>
-              ))
-            )}
-
-            <BreadcrumbItem>
-              <BreadcrumbPage>{lastItem.label}</BreadcrumbPage>
-            </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/dashboard">Dashboard
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
           </>
         )}
+        {paths.length > 1 && (
+          <BreadcrumbItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1">
+                <BreadcrumbEllipsis className="h-4 w-4" />
+                <span className="sr-only">Toggle menu</span>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {dropdownMenu.map(path => (
+                  <DropdownMenuItem>
+                  <BreadcrumbLink className='capitalize' href={`/${path}`}>
+                    {path}
+                  </BreadcrumbLink>
+                </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </BreadcrumbItem>
+        )}
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbPage className='capitalize' >{paths[paths.length - 1]}</BreadcrumbPage>
+        </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  );
+  )
 }

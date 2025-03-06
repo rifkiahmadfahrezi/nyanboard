@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { siteConfig } from "@/config/site";
 import Providers from "@/components/providers";
+import { ProgressbarProvider } from "@/components/providers/progressbar-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.className} antialiased`}>
+      <ProgressbarProvider>
         <Providers>{children}</Providers>
+      </ProgressbarProvider>
       </body>
     </html>
   );

@@ -14,9 +14,9 @@ export const ProgressbarProvider = ({
     <>
       {children}
       <ProgressBar
-        height={height}
-        color={color}
-        options={{ showSpinner: spinner }}
+        height={'3px'}
+        color={'red'}
+        options={{ showSpinner: true }}
         shallowRouting
       />
     </>

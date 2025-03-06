@@ -33,10 +33,6 @@ export const sidebarMenus: SidebarMenu[] = [
           {
             label: "Charts",
             url: "/dashboard/components/charts",
-            badge: {
-              variant: "warning",
-              content: "wip",
-            },
           },
           {
             label: "Multistep form",
