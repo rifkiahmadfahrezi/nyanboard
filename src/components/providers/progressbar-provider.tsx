@@ -14,8 +14,8 @@ export const ProgressbarProvider = ({
     <>
       {children}
       <ProgressBar
-        height={'3px'}
-        color={'red'}
+        height={"3px"}
+        color={"red"}
         options={{ showSpinner: true }}
         shallowRouting
       />

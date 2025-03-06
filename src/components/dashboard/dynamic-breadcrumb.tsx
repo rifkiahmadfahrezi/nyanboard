@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import React, { useMemo } from 'react'
+import React, { useMemo } from "react";
 
 import {
   Breadcrumb,
@@ -10,46 +10,44 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+} from "@/components/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { HomeIcon } from 'lucide-react'
-import Link from 'next/link'
+} from "@/components/ui/dropdown-menu";
+import { HomeIcon } from "lucide-react";
+import Link from "next/link";
 
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 
 export const DynamicBreadcrumb = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
-  const paths : string[] = useMemo(() => {
-    const splited = pathname.split('/')
-    splited.shift()
-    return splited
-  }, [pathname])
+  const paths: string[] = useMemo(() => {
+    const splited = pathname.split("/");
+    splited.shift();
+    return splited;
+  }, [pathname]);
 
-  const dropdownMenu : string[] = useMemo(() => {
-    const splited = pathname.split('/')
-    splited.shift()
-    splited.shift()
-    splited.pop()
-    return splited
-  }, [pathname])
-
+  const dropdownMenu: string[] = useMemo(() => {
+    const splited = pathname.split("/");
+    splited.shift();
+    splited.shift();
+    splited.pop();
+    return splited;
+  }, [pathname]);
 
   return (
     <Breadcrumb>
       <BreadcrumbList>
         {paths.length > 1 && (
           <>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="/dashboard">Dashboard
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
           </>
         )}
         {paths.length > 1 && (
@@ -60,12 +58,12 @@ export const DynamicBreadcrumb = () => {
                 <span className="sr-only">Toggle menu</span>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
-                {dropdownMenu.map(path => (
+                {dropdownMenu.map((path) => (
                   <DropdownMenuItem>
-                  <BreadcrumbLink className='capitalize' href={`/${path}`}>
-                    {path}
-                  </BreadcrumbLink>
-                </DropdownMenuItem>
+                    <BreadcrumbLink className="capitalize" href={`/${path}`}>
+                      {path}
+                    </BreadcrumbLink>
+                  </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
@@ -73,9 +71,11 @@ export const DynamicBreadcrumb = () => {
         )}
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className='capitalize' >{paths[paths.length - 1]}</BreadcrumbPage>
+          <BreadcrumbPage className="capitalize">
+            {paths[paths.length - 1]}
+          </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
-}
+  );
+};

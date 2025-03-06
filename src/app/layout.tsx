@@ -39,9 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.className} antialiased`}>
-      <ProgressbarProvider>
-        <Providers>{children}</Providers>
-      </ProgressbarProvider>
+        <ProgressbarProvider>
+          <Providers>{children}</Providers>
+        </ProgressbarProvider>
       </body>
     </html>
   );
