@@ -17,8 +17,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { HomeIcon } from "lucide-react";
-import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 
