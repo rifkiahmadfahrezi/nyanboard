@@ -1,6 +1,6 @@
 import type { SidebarMenu } from "@/types/sidebar-menu";
 
-import { House, LayoutDashboard, Layers } from "lucide-react";
+import { House, LayoutDashboard, Truck, Box } from "lucide-react";
 
 export const sidebarMenus: SidebarMenu[] = [
   {
@@ -9,6 +9,16 @@ export const sidebarMenus: SidebarMenu[] = [
         label: "Dashboard",
         url: "/dashboard",
         icon: House,
+      },
+      {
+        label: "Shipping",
+        url: "#",
+        icon: Truck,
+      },
+      {
+        label: "Products",
+        url: "#",
+        icon: Box,
       },
     ],
   },

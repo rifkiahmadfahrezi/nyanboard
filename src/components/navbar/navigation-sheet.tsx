@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
-import { navbarMenus } from "@/config/navigation-menu/navbar";
+import { navbarMenus } from "./navbar-menu";
 import {
   Collapsible,
   CollapsibleContent,

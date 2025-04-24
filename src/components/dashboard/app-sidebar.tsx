@@ -14,7 +14,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { NavMenu } from "./nav-menu";
-import { sidebarMenus } from "@/config/navigation-menu/sidebar";
+import { sidebarMenus } from "./sidebar-menu";
 
 const data = {
   user: {

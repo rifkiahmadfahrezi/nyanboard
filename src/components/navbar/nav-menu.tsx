@@ -11,7 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { navbarMenus } from "@/config/navigation-menu/navbar";
+import { navbarMenus } from "./navbar-menu";
 
 export function NavMenu({
   ...props

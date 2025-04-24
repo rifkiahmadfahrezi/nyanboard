@@ -24,7 +24,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
-import { isMenuActive } from "@/config/navigation-menu/utils";
+import { isMenuActive } from "@/lib/menu";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
 
@@ -45,9 +45,9 @@ export const NavMenu = ({ menus }: { menus: SidebarMenuType[] }) => {
               return (
                 <>
                   {!item.items ? (
-                    <Menu item={item} />
+                    <Menu item={item} key={item.url} />
                   ) : (
-                    <CollapsibleMenu items={item} />
+                    <CollapsibleMenu items={item} key={item.url} />
                   )}
                 </>
               );

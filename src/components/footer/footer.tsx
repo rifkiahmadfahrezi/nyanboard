@@ -11,7 +11,7 @@ import { Logo } from "../logo";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 
-import { footerSections } from "@/config/navigation-menu/footer";
+import { footerSections } from "./footer-menu";
 import { ThemeChange } from "../theme-change";
 
 export const Footer = ({
