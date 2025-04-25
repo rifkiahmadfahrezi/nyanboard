@@ -1,26 +1,30 @@
-# Get Started
+# Nyanboard
 
-1. Clone repository
+a Free and open-source dashboard template for Next.js built with typescript and shadcn UI.
+
+## Get Started
+
+Clone repository
 
 ```bash
 git clone https://github.com/rifkiahmadfahrezi/nyanboard.git
 ```
 
-2. Change directory & Install dependencies
+Change directory & Install dependencies
 
 ```bash
 cd nyanboard && pnpm install
 ```
 
-3. Run dev server
+Run dev server
 
 ```bash
 pnpm run dev
 ```
 
-# Setting Navigation
+## Setting Navigation
 
-Go to [src/config/navigation-menu/](https://github.com/rifkiahmadfahrezi/nyanboard/tree/main/src/config/navigation-menu) to set the menu and menu items.
+Go to each component (navbar/footer/dashboard) and you can edit the `...-menu.ts` file to set the menu and menu items.
 
 ## Navbar Menu
 
