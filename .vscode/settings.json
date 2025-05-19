@@ -8,6 +8,9 @@
       "source.fixAll.eslint": "explicit"
     }
   },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
