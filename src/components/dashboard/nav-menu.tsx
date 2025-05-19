@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import React from "react";
+import React from "react"
 import type {
   SidebarMenu as SidebarMenuType,
   SidebarSubmenu,
-} from "@/types/sidebar-menu";
-import { usePathname } from "next/navigation";
+} from "@/types/sidebar-menu"
+import { usePathname } from "next/navigation"
 
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react"
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@/components/ui/collapsible"
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,10 +23,10 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/components/ui/sidebar";
-import { isMenuActive } from "@/lib/menu";
-import Link from "next/link";
-import { Badge } from "../ui/badge";
+} from "@/components/ui/sidebar"
+import { isMenuActive } from "@/lib/menu"
+import Link from "next/link"
+import { Badge } from "../ui/badge"
 
 export const NavMenu = ({ menus }: { menus: SidebarMenuType[] }) => {
   return (
@@ -50,17 +50,17 @@ export const NavMenu = ({ menus }: { menus: SidebarMenuType[] }) => {
                     <CollapsibleMenu items={item} key={item.url} />
                   )}
                 </>
-              );
+              )
             })}
           </SidebarMenu>
         </SidebarGroup>
       ))}
     </>
-  );
-};
+  )
+}
 
 export const CollapsibleMenu = ({ items }: { items: SidebarSubmenu }) => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <Collapsible
@@ -116,11 +116,11 @@ export const CollapsibleMenu = ({ items }: { items: SidebarSubmenu }) => {
         </CollapsibleContent>
       </SidebarMenuItem>
     </Collapsible>
-  );
-};
+  )
+}
 
 export const Menu = ({ item }: { item: SidebarSubmenu }) => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <SidebarMenuItem key={item.label}>
@@ -145,5 +145,5 @@ export const Menu = ({ item }: { item: SidebarSubmenu }) => {
         </Link>
       </SidebarMenuButton>
     </SidebarMenuItem>
-  );
-};
+  )
+}

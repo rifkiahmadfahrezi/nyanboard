@@ -1,5 +1,5 @@
-import type { NavMenu } from "@/types/navbar";
-import { Briefcase, Building } from "lucide-react";
+import type { NavMenu } from "@/types/navbar"
+import { Briefcase, Building } from "lucide-react"
 
 export const navbarMenus: NavMenu[] = [
   {
@@ -37,4 +37,4 @@ export const navbarMenus: NavMenu[] = [
     label: "Contact",
     url: "/contact",
   },
-];
+]

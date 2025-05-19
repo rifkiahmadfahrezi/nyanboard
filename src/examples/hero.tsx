@@ -1,9 +1,9 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
+import React from "react"
 
 export const Hero = () => {
   return (
@@ -61,5 +61,5 @@ export const Hero = () => {
         </div>
       </figure>
     </div>
-  );
-};
+  )
+}

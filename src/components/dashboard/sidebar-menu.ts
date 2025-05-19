@@ -1,6 +1,6 @@
-import type { SidebarMenu } from "@/types/sidebar-menu";
+import type { SidebarMenu } from "@/types/sidebar-menu"
 
-import { House, LayoutDashboard, Truck, Box } from "lucide-react";
+import { House, LayoutDashboard, Truck, Box } from "lucide-react"
 
 export const sidebarMenus: SidebarMenu[] = [
   {
@@ -56,4 +56,4 @@ export const sidebarMenus: SidebarMenu[] = [
       },
     ],
   },
-];
+]

@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
-import { Logo } from "@/components/logo";
-import { cn } from "@/lib/utils";
+import { Logo } from "@/components/logo"
+import { cn } from "@/lib/utils"
 
-import Image from "next/image";
+import Image from "next/image"
 
 export interface AuthLayout extends React.ComponentProps<"div"> {
-  title: string;
+  title: string
 }
 export const AuthLayout = ({
   title,
@@ -40,5 +40,5 @@ export const AuthLayout = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

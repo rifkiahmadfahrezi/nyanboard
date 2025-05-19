@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import React from "react";
+import React from "react"
 
-import { Sun, Moon } from "lucide-react";
-import { useTheme } from "next-themes";
-import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "../ui/sidebar";
+import { Sun, Moon } from "lucide-react"
+import { useTheme } from "next-themes"
+import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "../ui/sidebar"
 
 export const ThemeSwithcer = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
 
   return (
     <SidebarMenu>
@@ -21,5 +21,5 @@ export const ThemeSwithcer = () => {
         </SidebarMenuButton>
       </SidebarMenuItem>
     </SidebarMenu>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,11 +6,11 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Bell } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
+} from "@/components/ui/dropdown-menu"
+import { Bell } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
 
 const notifs = [
   {
@@ -64,11 +64,11 @@ const notifs = [
       "Check out our latest course on JavaScript performance optimization.",
     unread: false,
   },
-];
+]
 
 export interface NotificationDropdownProps
   extends React.ComponentProps<typeof DropdownMenu> {
-  withBadge?: boolean;
+  withBadge?: boolean
 }
 export const NotificationDropdown = ({
   withBadge = false,
@@ -97,14 +97,14 @@ export const NotificationDropdown = ({
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
-};
+  )
+}
 
 export interface NotificationItemProps
   extends React.ComponentProps<typeof DropdownMenuItem> {
-  title: string;
-  description?: string;
-  unread?: boolean;
+  title: string
+  description?: string
+  unread?: boolean
 }
 export const NotificationItem = ({
   title,
@@ -128,5 +128,5 @@ export const NotificationItem = ({
         <p className="text-muted-foreground line-clamp-1">{description}</p>
       )}
     </DropdownMenuItem>
-  );
-};
+  )
+}

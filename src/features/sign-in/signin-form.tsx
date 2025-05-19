@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -8,20 +8,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { InputPassword } from "@/components/ui/input-password";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { Separator } from "@/components/ui/separator";
-import { GoogleLogo } from "@/components/icons";
-import Link from "next/link";
-import { z } from "zod";
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { InputPassword } from "@/components/ui/input-password"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { Separator } from "@/components/ui/separator"
+import { GoogleLogo } from "@/components/icons"
+import Link from "next/link"
+import { z } from "zod"
 
 const formSchema = z.object({
   email: z.string().email(),
   password: z.string().min(8, "Password must be at least 8 characters long"),
-});
+})
 
 export const SignInForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -30,11 +30,11 @@ export const SignInForm = () => {
       password: "",
     },
     resolver: zodResolver(formSchema),
-  });
+  })
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
-  };
+    console.log(data)
+  }
 
   return (
     <>
@@ -102,5 +102,5 @@ export const SignInForm = () => {
         </Link>
       </p>
     </>
-  );
-};
+  )
+}

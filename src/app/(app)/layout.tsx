@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,7 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="min-h-svh">{children}</main>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

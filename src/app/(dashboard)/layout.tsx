@@ -1,5 +1,5 @@
-import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
-import { AppSidebar, TopNav } from "@/components/dashboard";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
+import { AppSidebar, TopNav } from "@/components/dashboard"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,5 +10,5 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <main className="p-2">{children}</main>
       </SidebarInset>
     </SidebarProvider>
-  );
+  )
 }

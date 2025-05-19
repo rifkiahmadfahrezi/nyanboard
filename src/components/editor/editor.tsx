@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { useEditor, EditorContent, Content } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
-import { cn } from "@/lib/utils";
-import { useEffect } from "react";
-import { Toolbar } from "./toolbar";
+import { useEditor, EditorContent, Content } from "@tiptap/react"
+import StarterKit from "@tiptap/starter-kit"
+import { cn } from "@/lib/utils"
+import { useEffect } from "react"
+import { Toolbar } from "./toolbar"
 
 export interface EditorProps {
-  onContentChange: (content: string) => void;
-  value?: string;
-  disabled?: boolean;
-  className?: string;
-  placeholder?: string;
+  onContentChange: (content: string) => void
+  value?: string
+  disabled?: boolean
+  className?: string
+  placeholder?: string
 }
 
 export const Editor = ({
@@ -43,16 +43,16 @@ export const Editor = ({
     },
     onUpdate: ({ editor }) => {
       if (!disabled) {
-        onContentChange(editor.getHTML());
+        onContentChange(editor.getHTML())
       }
     },
-  });
+  })
 
   useEffect(() => {
     if (editorConfig && value !== editorConfig.getHTML()) {
-      editorConfig.commands.setContent(value as Content);
+      editorConfig.commands.setContent(value as Content)
     }
-  }, [editorConfig, value]);
+  }, [editorConfig, value])
 
   return (
     <>
@@ -66,5 +66,5 @@ export const Editor = ({
         />
       </div>
     </>
-  );
-};
+  )
+}

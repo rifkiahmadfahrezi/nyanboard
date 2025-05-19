@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
+import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 
 export const CTA = () => {
   return (
@@ -47,5 +47,5 @@ export const CTA = () => {
         />
       </figure>
     </Card>
-  );
-};
+  )
+}

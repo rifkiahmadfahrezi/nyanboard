@@ -1,18 +1,18 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/separator"
 import {
   ArrowUpRight,
   DribbbleIcon,
   GithubIcon,
   TwitchIcon,
   TwitterIcon,
-} from "lucide-react";
-import Link from "next/link";
-import { Logo } from "../logo";
-import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
+} from "lucide-react"
+import Link from "next/link"
+import { Logo } from "../logo"
+import { cn } from "@/lib/utils"
+import { siteConfig } from "@/config/site"
 
-import { footerSections } from "./footer-menu";
-import { ThemeChange } from "../theme-change";
+import { footerSections } from "./footer-menu"
+import { ThemeChange } from "../theme-change"
 
 export const Footer = ({
   className,
@@ -74,5 +74,5 @@ export const Footer = ({
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

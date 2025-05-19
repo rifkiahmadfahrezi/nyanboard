@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import { Hero, Features, CTA } from "@/examples";
+import { Hero, Features, CTA } from "@/examples"
 
 const HomePage = () => {
   return (
@@ -11,7 +11,7 @@ const HomePage = () => {
         <CTA />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

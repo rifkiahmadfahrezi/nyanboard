@@ -1,9 +1,9 @@
-"use client";
-import * as z from "zod";
-import { formSchema } from "./form-schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
-import { useForm } from "react-hook-form";
+"use client"
+import * as z from "zod"
+import { formSchema } from "./form-schema"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Button } from "@/components/ui/button"
+import { useForm } from "react-hook-form"
 import {
   Form,
   FormControl,
@@ -11,25 +11,25 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Editor } from "@/components/editor/editor";
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Editor } from "@/components/editor/editor"
 
 const initialState = {
   success: false,
   message: "",
   bio: "",
-};
+}
 
 export function ProfileForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {},
-  });
+  })
 
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-  };
+    console.log(values)
+  }
 
   return (
     <div className="mt-10">
@@ -64,8 +64,8 @@ export function ProfileForm() {
                       type={"text"}
                       value={field.value}
                       onChange={(e) => {
-                        const val = e.target.value;
-                        field.onChange(val);
+                        const val = e.target.value
+                        field.onChange(val)
                       }}
                     />
                   </FormControl>
@@ -86,8 +86,8 @@ export function ProfileForm() {
                       type={"email"}
                       value={field.value}
                       onChange={(e) => {
-                        const val = e.target.value;
-                        field.onChange(val);
+                        const val = e.target.value
+                        field.onChange(val)
                       }}
                     />
                   </FormControl>
@@ -123,5 +123,5 @@ export function ProfileForm() {
         </form>
       </Form>
     </div>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import {
   Dialog,
@@ -7,10 +7,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { ArrowRight, Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/dialog"
+import { ArrowRight, Search } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 export const SearchDialog = () => {
   return (
@@ -35,5 +35,5 @@ export const SearchDialog = () => {
         <div className="text-muted-foreground">Search result</div>
       </DialogContent>
     </Dialog>
-  );
-};
+  )
+}

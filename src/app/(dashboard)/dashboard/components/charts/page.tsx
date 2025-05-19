@@ -1,5 +1,5 @@
-import React from "react";
-import { Chart1, Chart2, Chart3 } from "@/examples/charts";
+import React from "react"
+import { Chart1, Chart2, Chart3 } from "@/examples/charts"
 
 const ChartsExample = () => {
   return (
@@ -14,7 +14,7 @@ const ChartsExample = () => {
         View more
       </a>
     </>
-  );
-};
+  )
+}
 
-export default ChartsExample;
+export default ChartsExample

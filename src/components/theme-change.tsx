@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { Moon, Sun, Monitor } from "lucide-react";
-import { Button } from "./ui/button";
-import { useTheme } from "next-themes";
+import { Moon, Sun, Monitor } from "lucide-react"
+import { Button } from "./ui/button"
+import { useTheme } from "next-themes"
 
-import React from "react";
+import React from "react"
 
 const themes = [
   {
@@ -22,13 +22,13 @@ const themes = [
     label: "System",
     theme: "system",
   },
-];
+]
 
 export const ThemeChange = ({
   className,
   ...props
 }: React.ComponentProps<"div">) => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
   return (
     <div
       className="flex items-center justify-between border rounded-full p-1"
@@ -47,5 +47,5 @@ export const ThemeChange = ({
         </Button>
       ))}
     </div>
-  );
-};
+  )
+}

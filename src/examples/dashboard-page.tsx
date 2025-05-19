@@ -1,12 +1,12 @@
 // Example dashboard page
-"use client";
-import React from "react";
+"use client"
+import React from "react"
 
-import { OverviewCard } from "@/components/overview-card";
-import { Box, ChartLine, ShoppingBag, Users } from "lucide-react";
+import { OverviewCard } from "@/components/overview-card"
+import { Box, ChartLine, ShoppingBag, Users } from "lucide-react"
 
-import { TrendingUp } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import { TrendingUp } from "lucide-react"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
 import {
   Card,
@@ -15,14 +15,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/card"
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
-import { DataTableDemo } from "./data-table";
+} from "@/components/ui/chart"
+import { DataTableDemo } from "./data-table"
 
 const data = [
   {
@@ -49,7 +49,7 @@ const data = [
     value: "10",
     icon: Users,
   },
-];
+]
 
 export const DashboardPage = () => {
   return (
@@ -80,8 +80,8 @@ export const DashboardPage = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
 const chartData = [
   { day: "15th Feb", success: 45, onprocess: 23, failed: 10 },
@@ -91,7 +91,7 @@ const chartData = [
   { day: "19th Feb", success: 55, onprocess: 23, failed: 7 },
   { day: "20th Feb", success: 60, onprocess: 21, failed: 8 },
   { day: "21st Feb", success: 62, onprocess: 16, failed: 11 },
-];
+]
 
 const chartConfig = {
   success: {
@@ -106,7 +106,7 @@ const chartConfig = {
     label: "Onprocess",
     color: "hsl(var(--chart-2))",
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function Orders() {
   return (
@@ -144,5 +144,5 @@ export function Orders() {
         </div>
       </CardFooter>
     </Card>
-  );
+  )
 }

@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import Image from "next/image";
+} from "@/components/ui/accordion"
+import Image from "next/image"
 
 const features = [
   {
@@ -31,7 +31,7 @@ const features = [
     description:
       "Enhance data management and interactivity with the power of TanStack's robust utilities.",
   },
-];
+]
 
 export const Features = () => {
   return (
@@ -74,5 +74,5 @@ export const Features = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

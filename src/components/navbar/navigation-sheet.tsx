@@ -1,14 +1,14 @@
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { ChevronDown, Menu } from "lucide-react";
-import { navbarMenus } from "./navbar-menu";
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { ChevronDown, Menu } from "lucide-react"
+import { navbarMenus } from "./navbar-menu"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@/components/ui/collapsible"
 
-import Link from "next/link";
+import Link from "next/link"
 
 export const NavigationSheet = () => {
   return (
@@ -57,5 +57,5 @@ export const NavigationSheet = () => {
         </ul>
       </SheetContent>
     </Sheet>
-  );
-};
+  )
+}

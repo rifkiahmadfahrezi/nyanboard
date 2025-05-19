@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-import { Separator } from "@/components/ui/separator";
-import { SidebarTrigger } from "../ui/sidebar";
-import { DynamicBreadcrumb } from "./dynamic-breadcrumb";
-import { NotificationDropdown } from "@/features/notification/notification-dropdown";
-import { SearchDialog } from "@/features/search-bar/search-dialog";
+import { Separator } from "@/components/ui/separator"
+import { SidebarTrigger } from "../ui/sidebar"
+import { DynamicBreadcrumb } from "./dynamic-breadcrumb"
+import { NotificationDropdown } from "@/features/notification/notification-dropdown"
+import { SearchDialog } from "@/features/search-bar/search-dialog"
 
 export const TopNav = ({
   className,
@@ -33,5 +33,5 @@ export const TopNav = ({
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

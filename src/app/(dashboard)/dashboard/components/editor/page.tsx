@@ -1,13 +1,13 @@
-import React from "react";
+import React from "react"
 
-import { ProfileForm } from "./_components/form";
+import { ProfileForm } from "./_components/form"
 
 const EditorComponentPage = () => {
   return (
     <>
       <ProfileForm />
     </>
-  );
-};
+  )
+}
 
-export default EditorComponentPage;
+export default EditorComponentPage

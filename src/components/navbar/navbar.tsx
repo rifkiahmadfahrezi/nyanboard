@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Logo } from "../logo";
-import { NavMenu } from "./nav-menu";
-import Link from "next/link";
-import { NavigationSheet } from "./navigation-sheet";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button"
+import { Logo } from "../logo"
+import { NavMenu } from "./nav-menu"
+import Link from "next/link"
+import { NavigationSheet } from "./navigation-sheet"
+import { cn } from "@/lib/utils"
 
 export const Navbar = ({
   className,
@@ -34,5 +34,5 @@ export const Navbar = ({
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}

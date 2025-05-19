@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import React, { useMemo } from "react";
+import React, { useMemo } from "react"
 
 import {
   Breadcrumb,
@@ -10,32 +10,32 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/components/ui/breadcrumb"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu"
 
-import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation"
 
 export const DynamicBreadcrumb = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   const paths: string[] = useMemo(() => {
-    const splited = pathname.split("/");
-    splited.shift();
-    return splited;
-  }, [pathname]);
+    const splited = pathname.split("/")
+    splited.shift()
+    return splited
+  }, [pathname])
 
   const dropdownMenu: string[] = useMemo(() => {
-    const splited = pathname.split("/");
-    splited.shift();
-    splited.shift();
-    splited.pop();
-    return splited;
-  }, [pathname]);
+    const splited = pathname.split("/")
+    splited.shift()
+    splited.shift()
+    splited.pop()
+    return splited
+  }, [pathname])
 
   return (
     <Breadcrumb>
@@ -75,5 +75,5 @@ export const DynamicBreadcrumb = () => {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  );
-};
+  )
+}

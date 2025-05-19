@@ -1,18 +1,18 @@
-"use client";
+"use client"
 
-import { Input } from "@/components/ui/input";
-import { EyeIcon, EyeOffIcon } from "lucide-react";
-import { useId, useState } from "react";
-import { cn } from "@/lib/utils";
+import { Input } from "@/components/ui/input"
+import { EyeIcon, EyeOffIcon } from "lucide-react"
+import { useId, useState } from "react"
+import { cn } from "@/lib/utils"
 
 export function InputPassword({
   className,
   ...props
 }: React.ComponentProps<typeof Input>) {
-  const id = useId();
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const id = useId()
+  const [isVisible, setIsVisible] = useState<boolean>(false)
 
-  const toggleVisibility = () => setIsVisible((prevState) => !prevState);
+  const toggleVisibility = () => setIsVisible((prevState) => !prevState)
 
   return (
     <div className="*:not-first:mt-2">
@@ -39,5 +39,5 @@ export function InputPassword({
         </button>
       </div>
     </div>
-  );
+  )
 }

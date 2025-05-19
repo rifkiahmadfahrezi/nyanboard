@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 export const GoogleLogo = ({
   className,
@@ -41,4 +41,4 @@ export const GoogleLogo = ({
       </clipPath>
     </defs>
   </svg>
-);
+)

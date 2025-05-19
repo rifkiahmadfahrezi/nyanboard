@@ -11,6 +11,6 @@ export const siteConfig = {
     height: "3px",
     spinner: false,
   },
-};
+}
 
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig

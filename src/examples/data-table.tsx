@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
 import {
   ColumnDef,
   SortingState,
@@ -12,11 +12,11 @@ import {
   getSortedRowModel,
   getFilteredRowModel,
   useReactTable,
-} from "@tanstack/react-table";
-import { ArrowUpDown, Search } from "lucide-react";
+} from "@tanstack/react-table"
+import { ArrowUpDown, Search } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import {
   Table,
   TableBody,
@@ -24,9 +24,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/table"
 
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge"
 
 const products: ProductOrder[] = [
   {
@@ -179,14 +179,14 @@ const products: ProductOrder[] = [
     price: "1024.72",
     status: "onprocess",
   },
-];
+]
 
 export type ProductOrder = {
-  id: number;
-  name: string;
-  status: "success" | "onprocess" | "failed";
-  price: string;
-};
+  id: number
+  name: string
+  status: "success" | "onprocess" | "failed"
+  price: string
+}
 
 const columns: ColumnDef<ProductOrder>[] = [
   {
@@ -217,24 +217,24 @@ const columns: ColumnDef<ProductOrder>[] = [
       </Button>
     ),
     cell: ({ row }) => {
-      const status = row.getValue("status");
+      const status = row.getValue("status")
       const getStatus = (status: ProductOrder["status"]) => {
         switch (status) {
           case "success":
-            return "success";
+            return "success"
           case "onprocess":
-            return "pending";
+            return "pending"
           case "failed":
-            return "destructive";
+            return "destructive"
           default:
-            return "secondary";
+            return "secondary"
         }
-      };
+      }
       return (
         <Badge variant={getStatus(status as ProductOrder["status"])}>
           {status as string}
         </Badge>
-      );
+      )
     },
   },
   {
@@ -256,15 +256,15 @@ const columns: ColumnDef<ProductOrder>[] = [
       </div>
     ),
   },
-];
+]
 
 export function DataTableDemo() {
-  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({});
+    React.useState<VisibilityState>({})
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     [],
-  );
+  )
 
   const table = useReactTable({
     data: products,
@@ -278,7 +278,7 @@ export function DataTableDemo() {
     onColumnFiltersChange: setColumnFilters,
     state: { sorting, columnVisibility, columnFilters },
     initialState: { pagination: { pageSize: 5 } },
-  });
+  })
 
   return (
     <div className="w-full">
@@ -368,5 +368,5 @@ export function DataTableDemo() {
         </div>
       </div>
     </div>
-  );
+  )
 }

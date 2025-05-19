@@ -1,10 +1,10 @@
-"use client";
-import { useState } from "react";
-import { toast } from "sonner";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { Button } from "@/components/ui/button";
+"use client"
+import { useState } from "react"
+import { toast } from "sonner"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -13,33 +13,33 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { SendIcon } from "lucide-react";
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { SendIcon } from "lucide-react"
 
 const formSchema = z.object({
   name: z.string().min(1),
   email: z.string(),
   message: z.string(),
-});
+})
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-  });
+  })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log(values);
+      console.log(values)
       toast(
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
           <code className="text-white">{JSON.stringify(values, null, 2)}</code>
         </pre>,
-      );
+      )
     } catch (error) {
-      console.error("Form submission error", error);
-      toast.error("Failed to submit the form. Please try again.");
+      console.error("Form submission error", error)
+      toast.error("Failed to submit the form. Please try again.")
     }
   }
 
@@ -106,5 +106,5 @@ export function ContactForm() {
         </Button>
       </form>
     </Form>
-  );
+  )
 }

@@ -1,13 +1,13 @@
-import React from "react";
+import React from "react"
 
-import { Card } from "@/components/ui/card";
-import type { LucideIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Card } from "@/components/ui/card"
+import type { LucideIcon } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 export interface OverviewCardProps extends React.ComponentProps<typeof Card> {
-  icon: LucideIcon;
-  title: string;
-  value: string;
+  icon: LucideIcon
+  title: string
+  value: string
 }
 export const OverviewCard = ({
   icon,
@@ -29,12 +29,12 @@ export const OverviewCard = ({
         {children}
       </div>
     </Card>
-  );
-};
+  )
+}
 
 export interface IconWrapperProps
   extends React.ComponentPropsWithoutRef<"div"> {
-  icon: LucideIcon;
+  icon: LucideIcon
 }
 export const IconWrapper = ({
   icon,
@@ -51,5 +51,5 @@ export const IconWrapper = ({
     >
       {React.createElement(icon)}
     </div>
-  );
-};
+  )
+}

@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/logo"
 import {
   Card,
   CardHeader,
@@ -8,17 +8,17 @@ import {
   CardTitle,
   CardDescription,
   CardFooter,
-} from "@/components/ui/card";
-import { Phone, Twitter, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/card"
+import { Phone, Twitter, MapPin } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion"
 
-import { ContactForm } from "@/features/contact/contact-form";
+import { ContactForm } from "@/features/contact/contact-form"
 
 const faq = [
   {
@@ -46,7 +46,7 @@ const faq = [
     answer:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laborum cumque odit at ad illum numquam. In, harum. Totam commodi aut ipsam adipisci atque quod. Saepe recusandae officia exercitationem laborum!",
   },
-];
+]
 
 const data = [
   {
@@ -67,7 +67,7 @@ const data = [
     description: "Visi our office",
     content: "View on google maps",
   },
-];
+]
 
 export const ContactPage = () => {
   return (
@@ -122,5 +122,5 @@ export const ContactPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

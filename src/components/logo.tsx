@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 export const Logo = ({ className, ...props }: React.ComponentProps<"svg">) => (
   <svg
@@ -15,4 +15,4 @@ export const Logo = ({ className, ...props }: React.ComponentProps<"svg">) => (
       fill="currentColor"
     ></path>
   </svg>
-);
+)

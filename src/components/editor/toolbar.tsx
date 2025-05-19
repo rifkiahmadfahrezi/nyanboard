@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { Bold, Strikethrough, Italic, List, ListOrdered } from "lucide-react";
-import { Toggle } from "@/components/ui/toggle";
-import { Separator } from "@/components/ui/separator";
-import type { Editor } from "@tiptap/react";
+import { Bold, Strikethrough, Italic, List, ListOrdered } from "lucide-react"
+import { Toggle } from "@/components/ui/toggle"
+import { Separator } from "@/components/ui/separator"
+import type { Editor } from "@tiptap/react"
 
 export const Toolbar = ({ editor }: { editor: Editor }) => {
   return (
@@ -45,5 +45,5 @@ export const Toolbar = ({ editor }: { editor: Editor }) => {
         <ListOrdered className="h-4 w-4" />
       </Toggle>
     </div>
-  );
-};
+  )
+}

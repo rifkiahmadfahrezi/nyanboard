@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import Link from "next/link";
+import Link from "next/link"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,9 +9,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/components/ui/navigation-menu"
 
-import { navbarMenus } from "./navbar-menu";
+import { navbarMenus } from "./navbar-menu"
 
 export function NavMenu({
   ...props
@@ -60,5 +60,5 @@ export function NavMenu({
         ))}
       </NavigationMenuList>
     </NavigationMenu>
-  );
+  )
 }

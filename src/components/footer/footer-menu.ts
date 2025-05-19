@@ -1,4 +1,4 @@
-import type { FooterSection } from "@/types/footer";
+import type { FooterSection } from "@/types/footer"
 
 export const footerSections: FooterSection[] = [
   {
@@ -90,4 +90,4 @@ export const footerSections: FooterSection[] = [
       },
     ],
   },
-];
+]

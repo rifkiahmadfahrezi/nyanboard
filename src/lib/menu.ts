@@ -5,7 +5,7 @@ export const isMenuActive = (
 ): boolean => {
   return currentPath === rootLink && link !== rootLink
     ? false
-    : link.startsWith(currentPath);
-};
+    : link.startsWith(currentPath)
+}
 
-type RootLink = `/${string}`;
+type RootLink = `/${string}`
